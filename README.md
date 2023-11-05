@@ -22,3 +22,5 @@ First, clone this repository.
 
 Then read `README.md` of each component, which contains information
 how to develop and deploy the project.
+
+![being_a_cat](https://github.com/Michalek007/RoboKoT/assets/101892382/a9ee07dc-042d-4321-8ae7-671da54ff155)
