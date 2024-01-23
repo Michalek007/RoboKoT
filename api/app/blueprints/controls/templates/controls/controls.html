@@ -1,0 +1,187 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <div class="white_text">
+        <div class="center"> Controls </div>
+    </div>
+
+    <div class="button-container">
+    <button class="button" id="_5">Meow</button>
+    <button class="button" id="_1">Come</button>
+    <button class="button" id="_6">Purr</button>
+    </div>
+
+    <div class="button-container">
+    <button class="button" id="_4">Turn around (left)</button>
+    <button class="button" id="_0">Wait</button>
+    <button class="button" id="_3">Turn around (right)</button>
+    </div>
+
+    <div class="button-container">
+    <button class="button" id="_7">Hiss</button>
+    <button class="button" id="_2">Move back</button>
+    <button class="button" id="_8">Paw</button>
+    </div>
+
+    <script>
+        function update_action(action){
+            const request = fetch('http://127.0.0.1:5000/' + 'update_action/' + action + '/', {method: 'PUT'})
+            .then((response) => response.json())
+            .then((json) => {
+                console.log(json['message']);
+            });
+            console.log(request);
+        }
+
+        function init_controls() {
+            // code for controlling the vehicle
+            var _0 = document.getElementById('_0');
+            var _1 = document.getElementById('_1');
+            var _2 = document.getElementById('_2');
+            var _3 = document.getElementById('_3');
+            var _4 = document.getElementById('_4');
+            var _5 = document.getElementById('_5');
+            var _6 = document.getElementById('_6');
+            var _7 = document.getElementById('_7');
+            var _8 = document.getElementById('_8');
+
+
+            _1.addEventListener('mousedown', function () {
+                update_action(1);
+                this.classList.add('active');
+            });
+
+            _1.addEventListener('mouseup', function () {
+                update_action(0);
+                this.classList.remove('active');
+            });
+
+            _1.addEventListener('mouseleave', function () {
+                update_action(0);
+                this.classList.remove('active');
+            });
+
+            _2.addEventListener('mousedown', function () {
+                update_action(2);
+                this.classList.add('active');
+            });
+
+            _2.addEventListener('mouseup', function () {
+                update_action(0);
+                this.classList.remove('active');
+            });
+
+            _2.addEventListener('mouseleave', function () {
+                update_action(0);
+                this.classList.remove('active');
+            });
+
+            _4.addEventListener('mousedown', function () {
+                update_action(4);
+                this.classList.add('active');
+            });
+
+            _4.addEventListener('mouseup', function () {
+                update_action(0);
+                this.classList.remove('active');
+            });
+
+            _4.addEventListener('mouseleave', function () {
+                update_action(0);
+                this.classList.remove('active');
+            });
+
+            _3.addEventListener('mousedown', function () {
+                update_action(3);
+                this.classList.add('active');
+            });
+
+            _3.addEventListener('mouseup', function () {
+                update_action(0);
+                this.classList.remove('active');
+            });
+
+            _3.addEventListener('mouseleave', function () {
+                update_action(0);
+                this.classList.remove('active');
+            });
+
+            _0.addEventListener('mousedown', function () {
+                update_action(0);
+                this.classList.add('active');
+            });
+
+            _0.addEventListener('mouseup', function () {
+                update_action(0);
+                this.classList.remove('active');
+            });
+
+            _0.addEventListener('mouseleave', function () {
+                update_action(0);
+                this.classList.remove('active');
+            });
+
+            _5.addEventListener('mousedown', function () {
+                update_action(5);
+                this.classList.add('active');
+            });
+
+            _5.addEventListener('mouseup', function () {
+                update_action(0);
+                this.classList.remove('active');
+            });
+
+            _5.addEventListener('mouseleave', function () {
+                update_action(0);
+                this.classList.remove('active');
+            });
+
+            _6.addEventListener('mousedown', function () {
+                update_action(6);
+                this.classList.add('active');
+            });
+
+            _6.addEventListener('mouseup', function () {
+                update_action(0);
+                this.classList.remove('active');
+            });
+
+            _6.addEventListener('mouseleave', function () {
+                update_action(0);
+                this.classList.remove('active');
+            });
+
+            _7.addEventListener('mousedown', function () {
+                update_action(7);
+                this.classList.add('active');
+            });
+
+            _7.addEventListener('mouseup', function () {
+                update_action(0);
+                this.classList.remove('active');
+            });
+
+            _7.addEventListener('mouseleave', function () {
+                update_action(0);
+                this.classList.remove('active');
+            });
+
+            _8.addEventListener('mousedown', function () {
+                update_action(8);
+                this.classList.add('active');
+            });
+
+            _8.addEventListener('mouseup', function () {
+                update_action(0);
+                this.classList.remove('active');
+            });
+
+            _8.addEventListener('mouseleave', function () {
+                update_action(0);
+                this.classList.remove('active');
+            });
+        }
+
+        init_controls();
+    </script>
+{% endblock %}
