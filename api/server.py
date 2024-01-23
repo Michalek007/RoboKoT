@@ -7,7 +7,7 @@ from app import app, deploy_app_views
 from scheduler import deploy_scheduler
 from configuration import Pid
 
-server_wsgi = pywsgi.WSGIServer(listener=(tuple(app.config['LISTENER'].values())), application=app)
+server_wsgi = pywsgi.WSGIServer(listener=('0.0.0.0', app.config['LISTENER']['port']), application=app)
 
 
 def run(server):

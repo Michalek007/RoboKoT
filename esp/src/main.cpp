@@ -58,6 +58,6 @@ void getAction(int& result){
     Serial.println(httpResponseCode);
     String payload = http.getString();
     Serial.println(payload);
-    result = (int) payload[13] - 48;
+    result = (int) payload[10] - 48;
   }
 }

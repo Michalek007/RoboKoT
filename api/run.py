@@ -10,4 +10,4 @@ if __name__ == '__main__':
     Pid.SERVICE = os.getpid()
     deploy_app_views()
     deploy_scheduler()
-    app.run()
+    app.run(host='0.0.0.0')
