@@ -37,7 +37,7 @@ Functionalities:
 
 ## Block diagram
 
-![image](https://github.com/Michalek007/RoboKoT/assets/101892382/4ec02756-487c-4141-b5fe-e56aa19ab3a2)
+![RoboKoT_block_diagram](https://github.com/Michalek007/RoboKoT/assets/101892382/d5fc1608-7e4d-43dd-bb56-9e43c4086868)
 
 ## Installation
 
