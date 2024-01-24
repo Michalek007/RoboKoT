@@ -3,8 +3,28 @@ Software for RoboKoT project.
 
 ## Project structure
 
+### CORE
+Embedded code for microcontroller FRDM-KL05Z (C).
+
+Core of the project, contains all RoboKoT logic.
+Functionalities:
+- 4x motors control via H-Bridge
+- 3x touch sensors handling (GPIO)
+- displaying RoboKoT emotions on LCD display (I2C)
+- petting RoboKoT via capacitive touch sensor (TSI)
+- wagging RoboKoT tail and paw with 2x servos (PWM)
+- playing cat alike sounds with speaker (PCM)
+- reading data from esp (UART)
+
 ### API
 Rest-api written in Python as Flask app.
+
+Allows user to give commands to RoboKoT via basic website.
+
+Functionalities:
+- user authorisation
+- handling esp requests
+- handling user requests
 
 ### ESP
 
@@ -13,6 +33,11 @@ Embedded code for microcontroller ESP32 (C++).
 Functionalities:
 - connects to WiFi
 - makes requests to api
+- sends data to core microcontroller via UART
+
+## Block diagram
+
+![image](https://github.com/Michalek007/RoboKoT/assets/101892382/4ec02756-487c-4141-b5fe-e56aa19ab3a2)
 
 ## Installation
 
