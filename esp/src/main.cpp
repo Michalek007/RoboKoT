@@ -2,6 +2,7 @@
 #include <WiFi.h>
 #include <HTTPClient.h>
 #include <HardwareSerial.h>
+#include "pass.h"
 
 #define UART2_TXD 17 // UART2 TxD -> GPIO17
 #define UART2_RXD 16 // UART2 RxD -> GPIO16
@@ -10,8 +11,8 @@
 void connectToWiFi(const char*, const char*);
 void getAction(int& result);
 
-const char* ssid     = "DESKTOP-O2OLJ1H 8056";  // The SSID (name) of the Wi-Fi network you want to connect to
-const char* password = "L5w7393^";  // The password of the Wi-Fi network
+const char* ssid     = SSID;  // The SSID (name) of the Wi-Fi network you want to connect to
+const char* password = PASSWORD;  // The password of the Wi-Fi network
 WiFiClient client;
 HTTPClient http;
 String servername = "http://192.168.137.1:5000";
